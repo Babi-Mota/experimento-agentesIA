@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import questionRoutes from './routes/questionRoutes';
 import examRoutes from './routes/examRoutes';
 
@@ -6,6 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
+app.use(cors());
 app.use(express.json());
 
 // Routes
